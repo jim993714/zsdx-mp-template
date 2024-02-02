@@ -1,0 +1,8 @@
+{
+    "pageName": "setting",
+    "auth": true,
+    "style": {
+        "navigationBarTitleText": "设置"
+    },
+    "path": "setting/index"
+}

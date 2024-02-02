@@ -1,0 +1,8 @@
+{
+    "path": "pages/main/shop-cart/index",
+    "pageName": "shopCart",
+    "style": {
+        "navigationStyle": "custom",
+        "navigationBarTitleText": "购物车"
+    }
+}

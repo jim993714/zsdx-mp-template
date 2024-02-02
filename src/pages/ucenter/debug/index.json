@@ -1,0 +1,7 @@
+{
+    "pageName": "debug",
+    "style": {
+        "navigationBarTitleText": "调试"
+    },
+    "path": "debug/index"
+}

@@ -1,0 +1,7 @@
+{
+    "path": "pages/main/login/index",
+    "pageName": "login",
+    "style": {
+        "navigationBarTitleText": "登录"
+    }
+}

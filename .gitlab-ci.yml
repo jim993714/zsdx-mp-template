@@ -1,0 +1,9 @@
+.extend-project:
+  variables:
+    STATIC_PATH: "./dist"
+    STATUS_TAG: "off"
+    STATUS_DEPLOY: "on"
+include:
+  - project: "operation/public/ci-node"
+    ref: "master"
+    file: "/mini/normal.yaml"

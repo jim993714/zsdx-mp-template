@@ -1,0 +1,96 @@
+{
+    "easycom": {
+        "custom": {
+            "^uni-(.*)": "@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue",
+            "^zd-(.*)": "@zsdx/mp-material/dist/lib/components/zd-$1/index.vue"
+        }
+    },
+    "pages": [
+        {
+            "path": "pages/main/home/index",
+            "pageName": "home",
+            "test": 12,
+            "style": {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            }
+        },
+        {
+            "path": "pages/main/login/index",
+            "pageName": "login",
+            "style": {
+                "navigationBarTitleText": "登录"
+            }
+        },
+        {
+            "path": "pages/main/mine/index",
+            "pageName": "mine",
+            "style": {
+                "navigationBarTitleText": "我的",
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/main/shop-cart/index",
+            "pageName": "shopCart",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        },
+        {
+            "path": "pages/main/login/phone-login/index",
+            "pageName": "phoneLogin",
+            "style": {
+                "navigationBarTitleText": "登录"
+            }
+        },
+        {
+            "path": "pages/main/login/invite-code/index",
+            "pageName": "inviteCode",
+            "style": {
+                "navigationBarTitleText": "登录"
+            }
+        }
+    ],
+    "subPackages": [],
+    "tabBar": {
+        "color": "#8A9399",
+        "selectedColor": "#199FFF",
+        "backgroundColor": "#FFFFFF",
+        "borderStyle": "white",
+        "list": [
+            {
+                "pagePath": "pages/main/home/index",
+                "iconPath": "static/home.png",
+                "selectedIconPath": "static/home-selected.png",
+                "text": "首页"
+            },
+            {
+                "pagePath": "pages/main/shop-cart/index",
+                "iconPath": "static/cart.png",
+                "selectedIconPath": "static/cart-selected.png",
+                "text": "购物车"
+            },
+            {
+                "pagePath": "pages/main/mine/index",
+                "iconPath": "static/mine.png",
+                "selectedIconPath": "static/mine-selected.png",
+                "text": "我的"
+            }
+        ]
+    },
+    "globalStyle": {
+        "backgroundTextStyle": "dark",
+        "navigationBarTextStyle": "black",
+        "navigationBarTitleText": "掌上大学",
+        "navigationBarBackgroundColor": "#ffffff",
+        "backgroundColor": "#ffffff",
+        "h5": {
+            "navigationStyle": "custom"
+        },
+        "usingComponents": {
+            "emoji": "/wxcomponents/emoji/index",
+            "mp-sticky": "/wxcomponents/sticky/index"
+        }
+    }
+}

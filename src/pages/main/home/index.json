@@ -1,0 +1,10 @@
+{
+    "path": "pages/main/home/index",
+    "pageName": "home",
+    "test": 12,
+    "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true,
+        "navigationBarTitleText": "首页"
+    }
+}

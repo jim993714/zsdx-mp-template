@@ -1,0 +1,8 @@
+{
+    "path": "pages/main/mine/index",
+    "pageName": "mine",
+    "style": {
+        "navigationBarTitleText": "我的",
+        "navigationStyle": "custom"
+    }
+}

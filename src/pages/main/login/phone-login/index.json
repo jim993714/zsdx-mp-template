@@ -1,0 +1,7 @@
+{
+    "path": "pages/main/login/phone-login/index",
+    "pageName": "phoneLogin",
+    "style": {
+        "navigationBarTitleText": "登录"
+    }
+}

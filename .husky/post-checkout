@@ -1,0 +1,50 @@
+#!/bin/bash
+
+increment_version_minjor ()
+{
+    declare -a part=( ${1//\./ } )
+    declare    new
+    declare -i carry=1
+    CNTR=${#part[@]}-2
+    len=${#part[CNTR]}
+    new=$((part[CNTR]+carry))
+    part[CNTR]=${new}
+    new="${part[*]}"
+
+    CNTR=${#part[@]}-1
+    len=${#part[CNTR]}
+    part[CNTR]=0
+    new="${part[*]}"
+    echo "${new// /.}"
+}
+
+increment_version_patch ()
+{
+    declare -a part=( ${1//\./ } )
+    declare    new
+    declare -i carry=1
+    CNTR=${#part[@]}-1
+    len=${#part[CNTR]}
+    new=$((part[CNTR]+carry))
+    part[CNTR]=${new}
+    new="${part[*]}"
+    echo "${new// /.}"
+}
+
+eval $(git reflog | awk 'NR==1{ printf("target=%s", $8) }')
+NODE_VERSION=$(node -p -e "require('./package.json').version")
+
+git fetch origin
+exist=`git rev-parse --verify "origin/"$target`
+if [ ${#exist} == 0 ];then
+    NewVersion=""
+    if [ `echo $target | grep "^feature/"` ];then
+        NewVersion=`increment_version_minjor $NODE_VERSION`
+        git push --set-upstream origin $target
+        node -e "var json = require('./package.json');json.version = '$NewVersion';const writeFileSync = require('fs').writeFileSync;writeFileSync('./package.json', JSON.stringify(json, null, 2))"
+    elif [ `echo $target | grep "^fix/"` ];then
+        NewVersion=`increment_version_patch $NODE_VERSION`
+        node -e "var json = require('./package.json');json.version = '$NewVersion';const writeFileSync = require('fs').writeFileSync;writeFileSync('./package.json', JSON.stringify(json, null, 2))"
+        git push --set-upstream origin $target
+    fi
+fi

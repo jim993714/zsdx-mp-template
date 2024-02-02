@@ -1,0 +1,7 @@
+{
+    "path": "pages/main/login/invite-code",
+    "pageName": "inviteCode",
+    "style": {
+        "navigationBarTitleText": "登录"
+    }
+}
